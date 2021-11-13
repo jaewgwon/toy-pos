@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">POSU</string>
+    <string name="login">Login</string>
+    <string name="id">ID</string>
+    <string name="password">Password</string>
+    <string name="auto_login">Save ID and Password</string>
+    <string name="unexpected_error">Unexpected error</string>
+</resources>
