@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.qualifiers.ActivityContext
+import io.github.jaewgwon.pos.ui.custom.LoadingDialogFragment
 import io.github.jaewgwon.pos.ui.login.LoginActivity
 import io.github.jaewgwon.pos.ui.login.LoginViewModel
 import io.github.jaewgwon.pos.ui.main.MainActivity
@@ -29,5 +30,10 @@ object ActivityModule {
     @Provides
     fun provideMainViewModel(@ActivityContext context: Context): MainViewModel {
         return ViewModelProvider(context as MainActivity).get(MainViewModel::class.java)
+    }
+
+    @Provides
+    fun provideLoadingDialog(): LoadingDialogFragment {
+        return LoadingDialogFragment()
     }
 }

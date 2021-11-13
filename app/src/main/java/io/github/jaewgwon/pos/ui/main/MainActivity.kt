@@ -28,4 +28,8 @@ class MainActivity: BaseActivity<ActivityMainBinding>(ActivityMainBinding::infla
     override fun onBackPressed() {
         logout()
     }
+
+    override fun onResume() {
+        super.onResume()
+    }
 }

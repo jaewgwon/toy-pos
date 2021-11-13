@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.2165" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1859375" />
+        <entry key="app/src/main/res/layout/fragment_loading.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_loading_dialog.xml" value="0.2" />
       </map>
     </option>
   </component>

@@ -1,16 +1,13 @@
 package io.github.jaewgwon.pos.ui.base
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import dagger.hilt.android.AndroidEntryPoint
-import io.github.jaewgwon.pos.data.model.api.NetworkStatus
+import io.github.jaewgwon.pos.ui.custom.LoadingDialogFragment
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import javax.inject.Inject
 
@@ -25,12 +22,19 @@ abstract class BaseActivity<VB:ViewBinding>(
     @Inject
     lateinit var disposables: CompositeDisposable
 
+    @Inject
+    lateinit var loading: LoadingDialogFragment
+
     lateinit var TAG: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = activityInflate.invoke(layoutInflater)
         setContentView(binding.root)
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 
     override fun onDestroy() {
@@ -45,11 +49,14 @@ abstract class BaseActivity<VB:ViewBinding>(
     }
 
     fun showLoading() {
-        Log.d(TAG + "", "SHOW LOADING")
+        loading.show(
+            supportFragmentManager,
+            "LOADING"
+        )
     }
 
     fun hideLoading() {
-        Log.d(TAG + "", "HIDE LOADING")
+        loading.dismiss()
     }
 
 }

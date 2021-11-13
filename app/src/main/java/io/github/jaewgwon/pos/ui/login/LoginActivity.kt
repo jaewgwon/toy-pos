@@ -4,14 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
 import dagger.hilt.android.AndroidEntryPoint
 import io.github.jaewgwon.pos.R
 import io.github.jaewgwon.pos.data.model.api.NetworkStatus
 import io.github.jaewgwon.pos.databinding.ActivityLoginBinding
 import io.github.jaewgwon.pos.ui.base.BaseActivity
+import io.github.jaewgwon.pos.ui.custom.LoadingDialogFragment
 import io.github.jaewgwon.pos.ui.main.MainActivity
-import io.reactivex.rxjava3.disposables.CompositeDisposable
 import javax.inject.Inject
 
 @AndroidEntryPoint
