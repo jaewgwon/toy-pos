@@ -52,6 +52,4 @@ abstract class BaseActivity<VB:ViewBinding>(
         Log.d(TAG + "", "HIDE LOADING")
     }
 
-
-
 }
